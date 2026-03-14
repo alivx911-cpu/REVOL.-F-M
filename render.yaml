@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: task-collab-app
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: DB_HOST
+        value: your-database-host
+      - key: DB_USER
+        value: your-database-user
+      - key: DB_PASSWORD
+        value: your-database-password
+      - key: DB_NAME
+        value: task_collab
+      - key: JWT_SECRET
+        generateValue: true
